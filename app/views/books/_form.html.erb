@@ -1,0 +1,35 @@
+<%= form_with(model: @book) do |form|%>
+  <div class="field form-group">
+    <% form.label :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Book Name" %>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field :author, class:"form-control", placeholder:"Author Name" %>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field :description, class:"form-control", placeholder:"Description of the books" %>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.text_field  :publish_year, class:"form-control", placeholder:"Publish year" %>
+  </div>
+
+  <div class="field form-group">
+
+    <%= form.number_field :rating, class:"form-control", placeholder:"Rating" %>
+  </div>
+<!--  <div class="field form-group">-->
+
+    <%#= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+<!--  </div>-->
+
+<!--  <br/>-->
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>

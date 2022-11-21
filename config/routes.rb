@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root "book#index"
-  resources :book
+  root to: "books#index"
+  resources :books
 end

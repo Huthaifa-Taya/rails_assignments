@@ -1,0 +1,10 @@
+<h1> Editing <%= @book.name %> </h1>
+<br/>
+<%= render 'form', book: @book %>
+
+<br/>
+<%= link_to 'Show', @book, class:"btn btn-secondary" %>
+
+<%= link_to 'Delete', @book, data: { "turbo-method": :delete}, confirm: "Are you sure?", class: "btn btn-danger" %>
+
+<%= link_to 'Back', book_path, class:"btn btn-dark" %>
